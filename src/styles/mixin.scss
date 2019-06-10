@@ -9,7 +9,7 @@ $primary: mat-palette($mat-blue, 800);
 }
 @mixin primary-background-contrast-color {
   $primary-color: map-get($primary, 400);
-  $font-color: map-get(map-get($primary, contrast), 400);
+  $font-color: white; // map-get(map-get($primary, contrast), 400);
   background-color: $primary-color;
   color: $font-color !important;
 }

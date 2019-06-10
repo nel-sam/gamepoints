@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { PersonCardComponent } from './person-card/person-card.component';
 import { SharedModule } from './core/shared/shared.module';
 import { HomeComponent } from './home/home.component';
+import { ToolbarComponent } from './core/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    ToolbarComponent,
     PersonCardComponent,
   ],
   imports: [
