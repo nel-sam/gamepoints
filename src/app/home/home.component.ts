@@ -17,6 +17,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  get leader(): string {
+    return 
+  }
+
   onAddButtonClick(): void {
     this.players.push({
       name: this.userToAdd,

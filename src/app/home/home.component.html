@@ -1,24 +1,25 @@
 <app-toolbar></app-toolbar>
 
 <mat-form-field class="full-width">
-
   <input matInput
     type="text"
     value="{{userToAdd}}"
     [(ngModel)]="userToAdd"
     placeholder="Add a player">
-
   <button mat-button
     matSuffix mat-icon-button
     aria-label="Clear"
     (click)="onAddButtonClick()"
-    [disabled]="userToAdd === '' ? true : null">
+    [disabled]="userToAdd === '' || players.length >= 10 ? true : null">
     <mat-icon class="add-icon">person_add</mat-icon>
   </button>
-
 </mat-form-field>
 
-<mat-grid-list cols="2">
+<!-- <span *ngIf="players.length > 0">
+    Leader feature coming soon
+</span> -->
+
+<mat-grid-list cols="2" rowHeight="110px">
   <mat-grid-tile *ngFor="let player of players">
     <app-person-card
       [playerName]="player.name">
