@@ -7,25 +7,23 @@ import { Player } from '../models/interfaces';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public players: Player[] = [
-    {
-      name: 'Ty',
-      points: 0
-    } as Player,
-    {
-      name: 'Nelson',
-      points: 0
-    } as Player,
-    {
-      name: 'Denis',
-      points: 0
-    } as Player
-  ] as Player[];
+  public userToAdd = '';
+
+  public players: Player[] = [];
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  onAddButtonClick(): void {
+    this.players.push({
+      name: this.userToAdd,
+      points: 0
+    } as Player);
+
+    this.userToAdd = '';
   }
 
 }
