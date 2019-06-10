@@ -1,3 +1,9 @@
-<app-person-card>
 
-</app-person-card>
+
+<mat-grid-list cols="2">
+  <mat-grid-tile *ngFor="let player of players">
+    <app-person-card
+      [playerName]="player.name">
+    </app-person-card>
+  </mat-grid-tile>
+</mat-grid-list>

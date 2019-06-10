@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/theme.scss",
+              "src/styles/mixin.scss",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },
@@ -88,7 +90,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/theme.scss",
+              "src/styles/mixin.scss",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }

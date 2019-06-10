@@ -1,9 +1,26 @@
-<mat-card>
-    <mat-card-subtitle>{{ playerName }}</mat-card-subtitle>
+<mat-card class="player-tile">
+    <mat-card-title>{{ playerName }}</mat-card-title>
     <mat-card-content>
-      <mat-icon aria-hidden="false" aria-label="Add point">
-        add_circle_outline
-      </mat-icon>
-      <h1>{{ points }}</h1>
+      <mat-grid-list cols="3">
+        <mat-grid-tile>
+          <mat-icon
+          aria-hidden="false"
+          aria-label="Add point"
+          (click)="decrementPoints()">
+            remove_circle
+          </mat-icon>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <span class="points">{{ points }}</span>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-icon
+          aria-hidden="false"
+          aria-label="Add point"
+          (click)="incrementPoints()">
+          add_circle_outline
+        </mat-icon>
+        </mat-grid-tile>
+      </mat-grid-list>
     </mat-card-content>
 </mat-card>

@@ -1,0 +1,16 @@
+
+@import "../../styles/mixin.scss";
+
+:host {
+  margin: 1rem;
+  width: 100%;
+  box-shadow: hsla(0, 0, 0, .2) 0 4px 2px -2px;
+}
+
+.player-tile {
+  background: lightseagreen;
+}
+
+.points {
+  font-size: 4rem;
+}

@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class PersonCardComponent implements OnInit {
   @Input() playerName: string;
-  @Output() points: Observable<number>;
+  // @Output() points: Observable<number>;
+  public points = 0;
 
   constructor() {
   }
@@ -16,4 +17,11 @@ export class PersonCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  incrementPoints(): void {
+    this.points++;
+  }
+
+  decrementPoints(): void {
+    this.points--;
+  }
 }
