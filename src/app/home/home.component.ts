@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit {
   }
 
   get leader(): string {
-    return 
+    return
   }
 
   onAddButtonClick(): void {
-    this.players.push({
+    this.players.unshift({
       name: this.userToAdd,
       points: 0
     } as Player);
