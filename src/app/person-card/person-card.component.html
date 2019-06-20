@@ -1,33 +1,23 @@
 <mat-card class="player-tile">
-    <mat-card-title>{{ playerName }}</mat-card-title>
-    <mat-card-content>
-      <mat-grid-list
-        cols="5"
-        rowHeight="4rem"
-        [gutterSize]="'2px'">
-        <mat-grid-tile>
-          <mat-icon
-          colspan="1"
-          aria-hidden="false"
-          aria-label="Subtract point"
-          (click)="decrementPoints()">
-            remove_circle
-          </mat-icon>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="3">
-          <span class="points">
-            <strong>{{ points }}</strong>
-          </span>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-icon
-          colspan="1"
-          aria-hidden="false"
-          aria-label="Add point"
-          (click)="incrementPoints()">
+  <mat-card-title class="mat-card-title" [class.highlight]="wasTapped">
+    {{ playerName }}
+  </mat-card-title>
+  <mat-card-content class="pointing-container">
+    <mat-grid-list cols="9" rowHeight="4rem" [gutterSize]="'2px'">
+      <mat-grid-tile colspan="3" (click)="decrementPoints()">
+        <mat-icon aria-hidden="false" aria-label="Subtract point">
+          remove_circle</mat-icon>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="3">
+        <span class="points">
+          <strong>{{ points }}</strong>
+        </span>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="3" (click)="incrementPoints()">
+        <mat-icon aria-hidden="false" aria-label="Add point">
           add_circle_outline
         </mat-icon>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </mat-card-content>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
 </mat-card>

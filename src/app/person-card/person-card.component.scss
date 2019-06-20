@@ -1,20 +1,57 @@
 
 @import "../../styles/mixin.scss";
 
+.highlight {
+  animation: fadeinout 6s linear forwards;
+}
+
+@keyframes fadeinout {
+  0%,20%,40%,60%,80%,100% {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 35px;
+  }
+
+  10%,30%,50%,70%,90% {
+    background-color: whitesmoke;
+    color: red;
+    font-size: 50px;
+  }
+}
+
 :host {
   margin: 1px;
   width: 100%;
   box-shadow: hsla(0, 0, 0, .2) 0 4px 2px -2px;
+
+  .player-tile {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 0;
+
+    .mat-card-title {
+      font-size: 35px;
+      text-align: center;
+      margin: 0 !important;
+    }
+
+    .pointing-container {
+      margin: 0;
+      padding: 0;
+
+      .points {
+        font-size: 3.5rem;
+      }
+
+      mat-icon {
+        font-size: 25px !important;
+      }
+    }
+  }
 }
 
-.player-tile {
-  @include primary-background-contrast-color;
-}
 
-.points {
-  font-size: 3.5rem;
-}
 
-mat-icon {
-  font-size: 25px !important;
-}
+
+
+

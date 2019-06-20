@@ -5,7 +5,8 @@
     type="text"
     value="{{userToAdd}}"
     [(ngModel)]="userToAdd"
-    placeholder="Add a player">
+    placeholder="Add a player"
+    (keydown.enter)="onAddButtonClick()">
   <button mat-button
     matSuffix mat-icon-button
     aria-label="Clear"
