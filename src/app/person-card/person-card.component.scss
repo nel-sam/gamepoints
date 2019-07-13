@@ -30,7 +30,6 @@
     padding: 0;
 
     .mat-card-title {
-      font-size: 35px;
       text-align: center;
       margin: 0 !important;
     }
@@ -39,10 +38,6 @@
       margin: 0;
       padding: 0;
 
-      .points {
-        font-size: 3.5rem;
-      }
-
       mat-icon {
         font-size: 25px !important;
       }
@@ -50,7 +45,26 @@
   }
 }
 
+@media all and (orientation: portrait) {
+  .points {
+    font-size: 2rem;
+  }
 
+  .mat-card-title {
+    font-size: 28px;
+  }
+}
+
+@media all and (orientation: landscape) {
+  .points {
+    font-size: 3.5rem;
+  }
+
+
+  .mat-card-title {
+    font-size: 35px;
+  }
+}
 
 
 
