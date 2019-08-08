@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Player } from '../models/interfaces';
+import { Player } from '../state/player.model';
+import { Observable } from 'rxjs';
+import { PlayersService } from '../state/players.service';
+import { PlayersQuery } from '../state/players.query';
 
 @Component({
   selector: 'app-home',
@@ -9,21 +12,23 @@ import { Player } from '../models/interfaces';
 export class HomeComponent implements OnInit {
   public userToAdd = '';
 
-  public players: Player[] = [];
+  public players$: Observable<Player[]>;
 
-  constructor() {
+  constructor(
+    private playersService: PlayersService,
+    private playersQuery: PlayersQuery) {
+    this.players$ = this.playersQuery.getPlayers();
   }
 
   ngOnInit() {
   }
 
   onAddButtonClick(): void {
-    this.players.unshift({
-      name: this.userToAdd,
-      points: 0
-    } as Player);
-
+    this.playersService.addPlayer({name: this.userToAdd});
     this.userToAdd = '';
   }
 
+  trackByFn(index, player) {
+    return player.id;
+  }
 }

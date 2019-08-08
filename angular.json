@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gamepoints"
+    }
+  },
+  "defaultProject": "gamepoints",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }

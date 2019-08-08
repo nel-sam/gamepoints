@@ -1,6 +1,6 @@
 # Gamepoints
 The Angular (web) version of my favorite tutorial app; GamePoints.
-GamePoints can be used to keep track of each player's points in any game. 
+GamePoints can be used to keep track of each player's points in any game.
 
 <img src="https://github.com/nel-sam/gamepoints/blob/master/screenshots/readme1.png" width="400px">
 
@@ -11,7 +11,8 @@ The animation in action
 ## What I learned
 1. CSS Animations using @keyframes
 2. Detecting orientation in CSS using @media
- 
+3. State Managment using Akita, (https://github.com/datorama/akita) a simpler state management solution for Angular.
+
 ## Previous skills I was able to practice
 1. Angular components using input, output, etc...
 2. Setting up an Angular app as a PWA

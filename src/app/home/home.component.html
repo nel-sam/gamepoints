@@ -9,9 +9,9 @@
     (keydown.enter)="onAddButtonClick()">
   <button mat-button
     matSuffix mat-icon-button
-    aria-label="Clear"
-    (click)="onAddButtonClick()"
-    [disabled]="userToAdd === '' || players.length >= 10 ? true : null">
+    aria-label="Add player"
+    (click)="onAddButtonClick()" >
+    <!-- [disabled]="userToAdd === '' || players.length >= 10 ? true : null" -->
     <mat-icon class="add-icon">person_add</mat-icon>
   </button>
 </mat-form-field>
@@ -21,7 +21,7 @@
 </span> -->
 
 <mat-grid-list cols="3" rowHeight="113px">
-  <mat-grid-tile *ngFor="let player of players">
+  <mat-grid-tile *ngFor="let player of players$ | async; trackBy: trackByFn">
     <app-person-card
       [playerName]="player.name">
     </app-person-card>
